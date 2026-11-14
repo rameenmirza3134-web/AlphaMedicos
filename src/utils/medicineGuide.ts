@@ -1,4 +1,4 @@
-import type { MedicalKitItem } from '../types/telemetry';
+import type { MedicalKitItem } from '../types/telemetry.js';
 
 export function getMedicineCareGuide(item: MedicalKitItem): {
   title: string;

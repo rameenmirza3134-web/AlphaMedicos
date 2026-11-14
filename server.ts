@@ -6,11 +6,11 @@ import type {
   MedicalKitItem,
   MetricStatus,
   VitalSnapshot,
-} from './src/types/telemetry';
+} from './src/types/telemetry.js';
 import {
   buildGroundControlReceipt,
   processFlightSurgeonRequest,
-} from './src/utils/flightSurgeonService';
+} from './src/utils/flightSurgeonService.js';
 
 dotenv.config();
 

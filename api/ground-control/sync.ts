@@ -1,5 +1,5 @@
-import type { MetricStatus } from '../../src/types/telemetry';
-import { buildGroundControlReceipt } from '../../src/utils/flightSurgeonService';
+import type { MetricStatus } from '../../src/types/telemetry.js';
+import { buildGroundControlReceipt } from '../../src/utils/flightSurgeonService.js';
 
 interface ServerlessReq {
   method?: string;

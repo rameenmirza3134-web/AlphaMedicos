@@ -2,8 +2,8 @@ import type {
   EvaluatedMetric,
   MedicalKitItem,
   VitalSnapshot,
-} from '../src/types/telemetry';
-import { processFlightSurgeonRequest } from '../src/utils/flightSurgeonService';
+} from '../src/types/telemetry.js';
+import { processFlightSurgeonRequest } from '../src/utils/flightSurgeonService.js';
 
 interface ServerlessReq {
   method?: string;

@@ -8,8 +8,8 @@ import type {
   MetricStatus,
   QuickActionType,
   VitalSnapshot,
-} from '../types/telemetry';
-import { findKitMatchForQuery, getMedicineCareGuide } from './medicineGuide';
+} from '../types/telemetry.js';
+import { findKitMatchForQuery, getMedicineCareGuide } from './medicineGuide.js';
 
 const NASA_STANDARD_TITLE = 'NASA Astronaut Health Safety Guide';
 
@@ -23,7 +23,10 @@ export interface FlightSurgeonInput {
 
 export function resolveGeminiKey(): string | null {
   const viteEnvKey =
-    typeof import.meta !== 'undefined' ? import.meta.env?.VITE_GEMINI_API_KEY : undefined;
+    typeof import.meta !== 'undefined'
+      ? (import.meta as unknown as { env?: Record<string, string | undefined> }).env
+          ?.VITE_GEMINI_API_KEY
+      : undefined;
   const raw =
     viteEnvKey ||
     process.env.VITE_GEMINI_API_KEY ||
