@@ -1,5 +1,4 @@
 import { GoogleGenAI, ThinkingLevel, Type } from '@google/genai';
-import nasaHealthData from '../data/nasaHealthData.json';
 import type {
   EvaluatedMetric,
   FlightSurgeonResponse,
@@ -10,7 +9,9 @@ import type {
   QuickActionType,
   VitalSnapshot,
 } from '../types/telemetry';
-import { findKitMatchForQuery, getMedicineCareGuide } from './telemetryEngine';
+import { findKitMatchForQuery, getMedicineCareGuide } from './medicineGuide';
+
+const NASA_STANDARD_TITLE = 'NASA Astronaut Health Safety Guide';
 
 export interface FlightSurgeonInput {
   message: string;
@@ -219,7 +220,7 @@ CRITICAL RULES:
               unit: item.unit,
             }))
           : 'EMPTY — astronaut has not added any medicines yet',
-      nasaStandard: nasaHealthData.standard,
+      nasaStandard: NASA_STANDARD_TITLE,
     });
 
     const response = await ai.models.generateContent({
