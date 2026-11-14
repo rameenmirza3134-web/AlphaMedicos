@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import path from 'node:path';
-import { createServer as createViteServer } from 'vite';
 import type {
   EvaluatedMetric,
   MedicalKitItem,
@@ -66,6 +65,7 @@ app.post('/api/ground-control/sync', (req, res) => {
 
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',

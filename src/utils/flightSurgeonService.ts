@@ -22,10 +22,12 @@ export interface FlightSurgeonInput {
 }
 
 export function resolveGeminiKey(): string | null {
+  const viteEnvKey =
+    typeof import.meta !== 'undefined' ? import.meta.env?.VITE_GEMINI_API_KEY : undefined;
   const raw =
-    process.env.GEMINI_API_KEY ||
+    viteEnvKey ||
     process.env.VITE_GEMINI_API_KEY ||
-    process.env.NEXT_PUBLIC_GEMINI_API_KEY ||
+    process.env.GEMINI_API_KEY ||
     '';
   const trimmed = raw.trim();
   if (!trimmed || trimmed === 'MY_GEMINI_API_KEY') {
