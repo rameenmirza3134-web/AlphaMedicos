@@ -1,0 +1,6 @@
+{
+  "name": "AlphaMedicos",
+  "description": "AlphaMedicos Astronaut Health & Wellness Monitoring System where crew enter live runtime vitals, track onboard medicine stock, relax with mind-calming games, and consult the AI Health Doctor.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

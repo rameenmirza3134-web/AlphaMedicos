@@ -1,0 +1,90 @@
+{
+  "standard": "NASA Astronaut Health Safety Guide",
+  "metrics": {
+    "radiation": {
+      "id": "radiation",
+      "label": "Space Radiation",
+      "unit": "mSv",
+      "hrpCode": "Radiation Check",
+      "description": "Total space radiation you have been exposed to during your trip.",
+      "thresholds": {
+        "safe": { "maxExclusive": 150, "label": "Safe < 150 mSv" },
+        "warning": { "minInclusive": 150, "maxInclusive": 400, "label": "Warning 150–400 mSv" },
+        "critical": { "minExclusive": 400, "label": "Critical > 400 mSv" }
+      },
+      "countermeasures": {
+        "Safe": "Radiation is low. Keep sleeping in your shielded bunk and check your badge daily.",
+        "Warning": "Move your work into the thicker middle rooms of the station and eat healthy snacks.",
+        "Critical": "High radiation! Go straight to the thick water-wall shelter room and message NASA Ground Control."
+      }
+    },
+    "heartRate": {
+      "id": "heartRate",
+      "label": "Heart Rate",
+      "unit": "BPM",
+      "hrpCode": "Heart Check",
+      "description": "How fast your heart is beating right now.",
+      "thresholds": {
+        "safe": { "minInclusive": 60, "maxInclusive": 90, "label": "Safe 60–90 BPM" },
+        "warning": { "minInclusive": 91, "maxInclusive": 115, "label": "Warning 91–115 BPM" },
+        "critical": { "minExclusive": 115, "label": "Critical > 115 BPM" }
+      },
+      "countermeasures": {
+        "Safe": "Your heart rate is steady and healthy. Keep up your daily 20-minute bike workout.",
+        "Warning": "Pause heavy work, drink a glass of water, and open Relax & Games for slow breathing.",
+        "Critical": "Stop working and rest right away. Use Relax & Games to slow your breathing and send an update to NASA."
+      }
+    },
+    "sleepDuration": {
+      "id": "sleepDuration",
+      "label": "Daily Sleep",
+      "unit": "hrs",
+      "hrpCode": "Sleep Check",
+      "description": "Total hours of sleep you got in the last 24 hours.",
+      "thresholds": {
+        "safe": { "minInclusive": 7.5, "label": "Safe >= 7.5 hrs" },
+        "warning": { "minInclusive": 6.0, "maxInclusive": 7.4, "label": "Warning 6.0–7.4 hrs" },
+        "critical": { "maxExclusive": 6.0, "label": "Critical < 6.0 hrs" }
+      },
+      "countermeasures": {
+        "Safe": "You are getting great sleep. Keep lights warm and dim before bedtime.",
+        "Warning": "Turn off bright blue lights 90 minutes before bed, skip coffee, and take a 25-minute nap.",
+        "Critical": "You need real rest. Skip tricky tasks today and protect a full 8-hour sleep tonight."
+      }
+    },
+    "boneDensityLoss": {
+      "id": "boneDensityLoss",
+      "label": "Bone Strength",
+      "unit": "%/mo",
+      "hrpCode": "Bone Check",
+      "description": "How much bone strength is changing each month while floating in space.",
+      "thresholds": {
+        "safe": { "minExclusive": -0.5, "label": "Safe > -0.5 %/mo" },
+        "warning": { "minInclusive": -1.2, "maxInclusive": -0.5, "label": "Warning -0.5 to -1.2 %/mo" },
+        "critical": { "maxExclusive": -1.2, "label": "Critical < -1.2 %/mo" }
+      },
+      "countermeasures": {
+        "Safe": "Bones are strong. Keep doing your daily squats and taking Vitamin D.",
+        "Warning": "Add a few extra squat sets on the workout machine and eat calcium-rich foods.",
+        "Critical": "Do a full 30–45 minute strength workout today and let NASA doctors check your bone plan."
+      }
+    },
+    "hydration": {
+      "id": "hydration",
+      "label": "Body Water (Hydration)",
+      "unit": "%",
+      "hrpCode": "Water Check",
+      "description": "How well hydrated your body is inside the dry spacecraft air.",
+      "thresholds": {
+        "safe": { "minInclusive": 85, "label": "Safe >= 85%" },
+        "warning": { "minInclusive": 70, "maxInclusive": 84, "label": "Warning 70–84%" },
+        "critical": { "maxExclusive": 70, "label": "Critical < 70%" }
+      },
+      "countermeasures": {
+        "Safe": "Water level looks great. Sip one small cup of water every 2 hours.",
+        "Warning": "Drink 300 ml of water right now (with an electrolyte pack if you have one).",
+        "Critical": "Stop heavy work and slowly sip 500 ml of water over the next 30 minutes."
+      }
+    }
+  }
+}
